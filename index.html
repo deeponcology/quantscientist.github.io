@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Deep Learning Bootcamp</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+
+
+    <!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="icons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="icons/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="icons/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+	<link rel="apple-touch-icon" href="icons/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icons/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icons/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icons/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="icons/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="icons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="icons/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="icons/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="icons/favicon-144.png">
+	<meta name="msapplication-config" content="icons/browserconfig.xml">
+
+
+    <!--<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">-->
+    <!--<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">-->
+    <!--<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">-->
+    <!--<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">-->
+    <!--<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">-->
+    <!--<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">-->
+    <!--<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">-->
+    <!--<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">-->
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">-->
+    <!--<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">-->
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">-->
+    <!--<link rel="manifest" href="/manifest.json">-->
+    <!--<meta name="msapplication-TileColor" content="#ffffff">-->
+    <!--<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">-->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86672135-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Deep Learning Boot-camp</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#resources">Resources</a>
+                    </li>
+                    <li>
+                        <!--<a class="page-scroll" href="#meetups">Meetups</a>-->
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#old-meetups">Past meetups</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#dl-links">Readings &#38; other links</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Deep Learning Boot-camp</h1>
+                <hr>
+                <p>A free community run, 5-day Deep Learning Bootcamp.</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <hr class="light">
+                    <p class="text-faded" style="text-align:justify">
+                        Tel-Aviv Deep Learning Bootcamp is an intensive (and free!) 5-day program intended to teach you about deep learning. The Bootcamp is organized such that it amalgamates, “Theory” and “Practice” – identifying that a deep learning scientist desires a survey of concepts combined with a strong application of practical techniques through labs.
+                        Primarily, the foundational material and tools of the Data Science practitioner are presented via Sk-Learn. Topics continue rapidly into exploratory data analysis and classical machine learning, where the data is organized, characterized, and manipulated.
+                        From day two, the students move from engineered models into 4 days of Deep Learning.
+                        <br>
+                        <br>
+                        Shlomo K., Nathaniel Shimoni, Natan Katz.
+                    <br>
+                    <center>
+                    <img class="img-circle" src="images/shlomo.png" hspace="5">
+                    <img class="img-circle" src="images/net.png" hspace="5">
+                    <img class="img-circle" src="images/natan.png" hspace="5">
+                    </center>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section class="bg-dark" id="resources">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-8 col-lg-offset-2 text-center">-->
+                    <!--<h2 class="section-heading">Resources</h2>-->
+                    <!--<hr class="light">-->
+                    <!--<div align="left">-->
+
+                    <!--<ul class="text-faded">-->
+
+                    <!--<ul> Start here:-->
+                    <!--<li>A presentation about our first 5-day Boot-camp is here. Check  <a href="http://deep-ml.com/assets/5daydeep/">The Bootcamp</a></li>-->
+                    <!--<li>Our github repository. Check <a href=https://github.com/QuantScientist/Deep-Learning-Boot-Camp">Github</a></li>-->
+                    <!--<li>Our GPU based Docker image. Check  <a href="https://github.com/QuantScientist/Deep-Learning-Boot-Camp/tree/master/docker">GPU based Docker</a></li>-->
+
+                    <!--</ul>-->
+
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+
+
+    <section class="bg-dark" id="resources">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Resources</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="http://deep-ml.com/assets/5daydeep/" class='social' target="_blank">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>The November 2017 Bootcamp</h3>
+                        <p class="text-muted">A presentation about our first 5-day Bootcamp</p>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="https://github.com/QuantScientist/Deep-Learning-Boot-Camp" class='social' target="_blank">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>github</h3>
+                        <p class="text-muted">Our github repository.</p>
+                    </div>
+                </div>
+
+                <!--<div class="col-lg-3 col-md-6 text-center">-->
+                <!--</div>-->
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="https://github.com/QuantScientist/Deep-Learning-Boot-Camp/tree/master/docker" class='social' target="_blank">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>GPU Docker</h3>
+                        <p class="text-muted">Our GPU based nvidia-docker image.</p>
+                    </div>
+                </div>
+
+                <!--<div class="col-lg-3 col-md-6 text-center">-->
+                <!--</div>-->
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="https://github.com/QuantScientist/Deep-Learning-Boot-Camp/tree/master/day%2002%20PyTORCH%20and%20PyCUDA/PyTorch" class='social' target="_blank">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>PyTorch notebooks</h3>
+                        <p class="text-muted">The PyTorch Lab notebooks</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="old-meetups">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Previous meetups can be found below.</h2>
+
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/238195509/" class="btn btn-default btn-xl wow tada">Data Science Job fair: meet hundreds of data scientists</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/241314067/" class="btn btn-default  wow tada">Metal GPU Deep Learning and Image processing on the OSX/IOS</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/236814638/" class="btn btn-default btn-xl wow tada">Hacking Kaggle Challenges</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/239486455/" class="btn btn-default  wow tada">Reinforcement Learning Intro</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/237858719/" class="btn btn-default btn-xl wow tada">Deep Learning + DevOps with TensorFlow and Docker</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/238834590/" class="btn btn-default  wow tada">TensorFlow & deep learning (Martin Görner,Google)</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/236635918/" class="btn btn-default btn-xl wow tada">Deep Learning + DevOps with TensorFlow and Docker</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/237858719/" class="btn btn-default  wow tada">Bayesian Machine and Deep Learning</a>
+                <br>
+                <br>
+                <a href="https://www.meetup.com/Tel-Aviv-Deep-Learning-Bootcamp/events/236593473/" class="btn btn-default btn-xl wow tada">Data Science Interview Preparation Session</a>
+                <br>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="divider"></div>
+
+
+   <section class="bg-dark" id="dl-links">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Readings &#38; Deep Learning resources</h2>
+
+                    <p class="text-faded">
+                    <div align="left">
+
+                    <ul class="text-faded">
+
+                    <!--<li> <a href="http://cilvr.cs.nyu.edu/doku.php?id=deeplearning:slides:start" style="color: white;">Neural Networks and Deep Learning</a>, Neural Networks and Deep Learning is a great free online book..</li>-->
+
+                    <li> <a href="http://cilvr.cs.nyu.edu/doku.php?id=deeplearning:slides:start" style="color: white;">Deep Learning</a>, a course organized by Y. LeCun at the New York University.</li>
+
+                    <li> <a href="http://cs224d.stanford.edu/syllabus.html"
+                     style="color: white;">Deep Learning for Natural Language Processing</a>, a course organized by R. Socher at Stanford.</li>
+
+                    <li> <a href="http://vision.stanford.edu/teaching/cs231n/syllabus.html" style="color: white;">Convolutional Neural Networks for Visual Recognition</a>, a course organized by A. Karpathy and Fei-Fei Li at Stanford.</li>
+
+                    <li> <a href="https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/" style="color: white;">Machine Learning</a>, a course organized by N. de Freitas at Oxford.</li>
+
+                    <li> <a href="https://www.coursera.org/course/neuralnets" style="color: white;">Neural Networks for Machine Learning</a>, a course organized by G. Hinton at Coursera.</li>
+
+                    <li> <a href="http://info.usherbrooke.ca/hlarochelle/neural_networks/content.html" style="color: white;">Neural Networks</a>, a course organized by H. Larochelle at Université de Sherbrooke.</li>
+
+                    <li> <a href="https://www.udacity.com/course/deep-learning--ud730" style="color: white;">Deep Learning</a>, a course organized by Google at Udacity.</li>
+
+                    <li> <a href="https://github.com/joanbruna/stat212b" style="color: white;">Topics Course on Deep Learning</a>, a course organized by Joan Bruna at the Statistics Department of UC Berkeley.</li>
+
+                    </ul>
+
+                    </div>
+                    </p>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Contact us!</h2>
+                    <hr class="primary">
+                    <p class="running-text" style="text-align:justify">
+                    You can always drop us a line!
+                         <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                        <br>
+                    <a href="mailto:shlomo@deep-ml.com">shlomo@deep-ml.com</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+
+</body>
+
+</html>

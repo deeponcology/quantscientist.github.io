@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Deep Learning Bootcamp</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/laravel.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/atom-one-dark.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="slide-intro" data-markdown="slides/1.md" data-background-image="lib/img/intro.png" data-background-size="42%"></section>
+        <section data-markdown="slides/2.md"></section>
+        <section data-markdown="slides/3.md"></section>
+        <section data-markdown="slides/3.1.md"></section>
+        <section>
+          <section data-markdown="slides/4.md"></section>
+          <section data-markdown="slides/4.1.md"></section>
+          <section data-markdown="slides/5.md"></section>
+        </section>
+        <section>
+          <section data-markdown="slides/6.md"></section>
+          <section data-markdown="slides/7.md"></section>
+          <section data-markdown="slides/8.md"></section>
+          <section data-markdown="slides/8.1.md"></section>
+          <section data-markdown="slides/9.md"></section>
+          <section data-markdown="slides/11.md"></section>
+          <section data-markdown="slides/12.md"></section>
+        </section>
+        <section data-markdown="slides/thanks.md"></section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+        height: 750,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          // { src: 'plugin/prism/prism.js', async: true, callback: function() {  } }
+        ]
+      });
+    </script>
+  </body>
+</html>

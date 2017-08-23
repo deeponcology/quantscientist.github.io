@@ -1,0 +1,185 @@
+/**
+ * Blood theme for reveal.js
+ * Author: Walther http://github.com/Walther
+ *
+ * Designed to be used with highlight.js theme
+ * "monokai_sublime.css" available from
+ * https://github.com/isagalaev/highlight.js/
+ *
+ * For other themes, change $codeBackground accordingly.
+ *
+ */
+
+ // Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+
+@import "../../../lib/font/fira-code/fira_code";
+
+// Colors used in the theme
+$orange: hsl(2deg, 87%, 66%);
+$coal: hsl(220deg, 13%, 10%);
+$codeBackground: mix($orange, lighten($coal, 8%), 10%);
+$codeColor: mix($orange, #bbb, 10%);
+
+$backgroundColor: $coal;
+$selectionBackgroundColor: rgba($orange, .9);
+
+// Main text
+$mainColor: mix(#ddd, $orange, 80%);
+$mainFont: "Fira Code", monospace;
+$mainFontSize: 20px;
+$headingFontWeight: 500;
+
+// Headings
+$headingFont: $mainFont;
+$headingColor: $orange;
+$headingTextShadow: 2px 2px 2px $coal;
+$heading1Size: 2em;
+$heading2Size: 1.5em;
+
+// h1 shadow, borrowed humbly from
+// (c) Default theme by Hakim El Hattab
+// $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+
+// Links
+$linkColor: $orange;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: fade-out($orange, .1);
+$selectionColor: #fff;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// some overrides after theme template import
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.reveal {
+	.slides {
+		text-align: left;
+
+		section {
+			line-height: 1.5;
+		}
+	}
+
+	h1,
+	h2 {
+		text-transform: none;
+	}
+
+	h1 {
+		margin-bottom: 1em;
+	}
+
+	h2 {
+		color: inherit;
+	}
+
+	ul {
+		margin-left: 0;
+		width: 75%;
+
+		li {
+			list-style-type: none;
+			padding-left: .15em;
+
+			&::before {
+				content: "//";
+				color: mix($orange, $coal, 40%);
+				font-weight: 300;
+				display: inline-block;
+				margin-left: -2em;
+				margin-right: .75em;
+			}
+		}
+	}
+
+	li {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	code {
+		background-color: $codeBackground;
+		color: $codeColor;
+		border-radius: 3px;
+		display: inline-block;
+		font-family: $mainFont;
+		padding-left: .4em;
+		padding-right: .4em;
+	}
+
+	pre {
+		font-size: .75em;
+		line-height: 1.7;
+		width: 100%;
+
+		&::before {
+			background-color: desaturate(lighten($coal, 75%), 10%);
+			border-top-left-radius: 2px;
+			border-top-right-radius: 2px;
+			color: lighten($coal, 50%);
+			content: "•••";
+			display: block;
+			font-size: 1em;
+			line-height: 1.2;
+			text-indent: .5em;
+			width: 100%;
+		}
+
+		code {
+			background-color: lighten($coal, 8%);
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			max-height: 600px;
+			padding: 10px 15px;
+		}
+	}
+
+	p {
+		font-weight: 300;
+		text-shadow: 1px 1px $coal;
+	}
+
+	small code {
+		vertical-align: baseline;
+	}
+
+
+	.slide-intro {
+		h1 {
+			font-size: 3em;
+			font-weight: 400;
+		}
+
+		img {
+			background: none;
+			border: 0;
+			box-shadow: none;
+			margin-bottom: 50px;
+			max-width: 100px;
+		}
+	}
+}
+
+code::-webkit-scrollbar {
+	background-color: lighten($coal, 20%);
+	width: .3em;
+}
+
+code::-webkit-scrollbar-thumb {
+	background-color: $orange;
+	border-radius: .2em;
+}
